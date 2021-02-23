@@ -16,12 +16,5 @@ public class InfrastructureApplication {
         SpringApplication.run(InfrastructureApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner start(ProductPersistencePort productPersistencePort) {
-        return args -> {
-            productPersistencePort.addProduct(new Product(1, "Test", "Test"));
-
-        };
-    }
 
 }

@@ -11,7 +11,7 @@ import java.util.List;
 public class ProductServiceAdapter implements ProductService {
 
     private  ProductPersistencePort productPersistencePort;
-   @Autowired
+    @Autowired
     public ProductServiceAdapter(ProductPersistencePort productPersistencePort) {
         this.productPersistencePort=productPersistencePort;
     }

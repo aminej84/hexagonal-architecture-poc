@@ -15,9 +15,8 @@ public class ProductSpringJpaAdapter implements ProductPersistencePort {
 
     private ProductRepository productRepository;
 
-    public ProductSpringJpaAdapter() {
-    }
-    @Autowired
+
+
     public ProductSpringJpaAdapter(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }

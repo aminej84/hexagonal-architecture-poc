@@ -5,14 +5,11 @@ import fr.hexagonal.application.service.ProductService;
 import fr.hexagonal.domain.spi.ProductPersistencePort;
 import fr.hexagonal.infrastructure.adapter.ProductSpringJpaAdapter;
 import fr.hexagonal.infrastructure.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ApplicationConfiguration {
-   // private ProductRepository productRepository;
-
 
 
     @Bean
@@ -20,9 +17,11 @@ public class ApplicationConfiguration {
         return new ProductServiceAdapter(productPersistencePort);
     }
 
-    @Bean
-    public ProductPersistencePort getProductPersistencPort() {
-        return new ProductSpringJpaAdapter();
-    }
+//    @Bean
+//    public ProductPersistencePort getProductPersistencPort(ProductRepository productRepository) {
+//        return new ProductSpringJpaAdapter(productRepository);
+//    }
+
+
 
 }
